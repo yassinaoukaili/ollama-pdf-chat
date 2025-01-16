@@ -3,7 +3,6 @@ from src.model import Model
 from src.pdf_chat import PdfChat
 
 if __name__ == '__main__':
-
     # Step 1: Create an instance of the Model, specifying the embeddings model and chat model.
     model_instance = Model(embeddings_model='nomic-embed-text:latest',
                            chat_model='llama3.2:1b')
@@ -20,4 +19,3 @@ if __name__ == '__main__':
 
     # Step 5: Start the chat loop, where the user can interact with the assistant and get answers.
     chat.chat()
-

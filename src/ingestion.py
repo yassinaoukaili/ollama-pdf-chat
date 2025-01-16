@@ -28,6 +28,9 @@ class Ingestor:
         self.persist_directory = Path(__file__).parent.parent / 'db' / 'chroma_langchain_db'
         self.file_path = self.data_folder / file_name
 
+        if not self.data_folder.exists():
+            self.data_folder.mkdir()
+
         self._instantiate_vector_store()
 
     def _instantiate_vector_store(self):
